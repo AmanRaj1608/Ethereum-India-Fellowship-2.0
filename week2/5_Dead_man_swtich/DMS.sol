@@ -1,4 +1,6 @@
-pragma solidity >=0.5.0 <0.8.0;
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.5.0 <0.8.0; // using payable takes version above 5
 
 // the SELFDESTRUCT opcode uses negative gas because the operation frees up space on the blockchain by clearing all of the contract's data.
 contract DMS {
@@ -11,7 +13,7 @@ contract DMS {
     constructor() payable {
         owner = msg.sender;
         previousBlock = block.number;
-        recoverAddress = payable(0x57Ac4E60a3fDaDec7e6b51b28488B392447801F4); // my addr
+        recoverAddress = payable(0xdbCaD3ca6AF619Ff5d8756aa13d6D917aD1f7E6C); // my addr
         balance = msg.value;
     }
 
